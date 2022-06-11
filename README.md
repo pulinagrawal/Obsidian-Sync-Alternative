@@ -1,4 +1,4 @@
-# Obsidian-Sync
+# Obsidian Syncing Alternative
 
 ## How to keep your Obsidian notes synced between your desktop app and phone app?
 
