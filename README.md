@@ -53,7 +53,7 @@ cd $TPWD
 
 > Make this file executable by running
 
-chmod 755 sync.sh
+``` chmod 755 /path/to/sync.sh ```
 
 > Next, you need to setup a cron job in Termux. For more details on setting up a cron job you can refer to the following article. https://phoenixnap.com/kb/set-up-cron-job-linux.
 
