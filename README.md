@@ -34,18 +34,41 @@ Password: your_token
 
 > Setup access to your git repo using your method of liking (personal token, ssh key, etc.). Make sure you are able to push and pull your repo.
 
+> Create a .sh file with the following lines.
+
+
+```
+#sync.sh
+TPWD=$PWD
+
+cd ~/path/to/your/cloned/vault
+
+git add -A
+git commit -m "android backup at $(date)"
+git pull
+git push
+
+cd $TPWD
+```
+
+> Make this file executable by running
+
+chmod 755 sync.sh
+
 > Next, you need to setup a cron job in Termux. For more details on setting up a cron job you can refer to the following article. https://phoenixnap.com/kb/set-up-cron-job-linux.
 
 ``` crontab -e ```
 
-Now basically, add a line that will run the right sequence of git commands to pull content from a remote git repo and then push the current contents back to the remote. 
+> Add a line in the cronjob that says
+ 
+```
+* * * * * bash /path/to/sync.sh
+```
 
-All you need then is to keep Termux running!
+### Then all you need to do is to keep Termux running! (If your phone shuts off, because you never cared to plug it in in time, you will have to just open termux app and let it run in the background)
 
 > Open the Obsidian app on your android device and select 'Open folder as vault' and open the folder that you just cloned.
  
 ## Footnote
 
-Sorry for a badly written solution. More details coming soon...
-
-Please let me know if you liked this solution by leaving a comment in the Issues of this GitHub repo. 
+Please let me know if you liked this solution or you have any questions by leaving a comment in the Issues section of this GitHub repo. 
