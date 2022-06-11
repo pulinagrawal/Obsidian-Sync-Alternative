@@ -12,7 +12,7 @@ I assume you are already using Obsidian if you have reached this page. But if no
 
 Next, setup a folder on your android device where you want to store your synced notes from your desktop. 
 
-> Run the following commands in Termux to setup git.
+> Run the following commands in Termux to setup git. (It is a little tricky to set this up. It hasn't been a very deterministic process for me. Hopefully you have better luck than me.) 
 
 ``` 
 termux-setup-storage
@@ -34,7 +34,7 @@ Password: your_token
 
 > Setup access to your git repo using your method of liking (personal token, ssh key, etc.). Make sure you are able to push and pull your repo.
 
-> Create a .sh file with the following lines.
+> Create a sync.sh file with the following lines.
 
 
 ```
