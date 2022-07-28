@@ -57,7 +57,11 @@ cd $TPWD
 
 > Next, you need to setup a cron job in Termux. For more details on setting up a cron job you can refer to the following article. https://phoenixnap.com/kb/set-up-cron-job-linux.
 
-``` crontab -e ```
+```
+pkg install cronie termux-services
+sv-enable crond
+crontab -e 
+```
 
 > Add a line in the cronjob that says
  
