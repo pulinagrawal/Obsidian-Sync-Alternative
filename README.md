@@ -91,6 +91,17 @@ cd $TPWD
 
 ``` chmod 755 /path/to/sync.sh ```
 
+> Add your user name and email to git
+```
+git config --global user.email "your@email.com"
+git config --global user.name "your name"
+```
+
+> Verify that you are able to run sync.sh by running the following command from the directory where sync.sh is located.
+```
+bash sync.sh
+```
+
 > Next, you need to setup a cron job in Termux. For more details on setting up a cron job you can refer to the following article. https://phoenixnap.com/kb/set-up-cron-job-linux.
 
 ```
