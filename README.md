@@ -1,4 +1,5 @@
-# Obsidian Syncing Alternative
+# Obsidian Syncing Alternative (For Android and iOS)
+#free #no-cost
 
 ## How to keep your Obsidian notes synced between your desktop app and phone app?
 
