@@ -59,6 +59,13 @@ git clone git@github.com:username/repo.git
 ```
 
 iPad (if hanging up here or on git pull)
+First try this
+```
+echo https://dl-cdn.alpinelinux.org/alpine/v3.14/main >> /etc/apk/repositories
+echo https://dl-cdn.alpinelinux.org/alpine/v3.14/community >> /etc/apk/repositories
+sed -i -e '/http:\/\/apk.ish.app/d' /etc/apk/repositories 
+```
+Then try this
 ```
 git config --global pack.thread "1"
 ```
@@ -131,6 +138,12 @@ pkg install cronie termux-services
 ```
 sv-enable crond
 crontab -e 
+```
+
+iPad
+```
+rc-service crond start && rc-update add crond
+crontab -e
 ```
 
 > Add a line in the cronjob that says
