@@ -15,6 +15,11 @@ I assume you are already using Obsidian if you have reached this page. But if no
 ``` 
 termux-setup-storage
 ```
+
+iPad
+```
+mount -t ios website /mnt
+```
 Allow permission to storage. Type 'ls' to make sure that you can see the 'storage' folder. 
 ```
 ls
@@ -25,6 +30,14 @@ You need git to clone and pull and push changes to your vault. You need openssh 
 apt update && apt upgrade -y
 pkg install git -y
 pkg install openssh -y
+```
+
+iPad
+```
+apk add apk-cron
+apk add git
+apk add openssh
+apk add openrc
 ```
 >Print the public key using the following command.
 ```
@@ -43,6 +56,11 @@ cd ~/storage/shared/path/to/folder/
 
 ```
 git clone git@github.com:username/repo.git
+```
+
+iPad (if hanging up here or on git pull)
+```
+git config --global pack.thread "1"
 ```
 
 I had a little issue setting this up because the ssh-agent was not started and I was getting "Error: Permission denied (publickey)". I followed the following links 
